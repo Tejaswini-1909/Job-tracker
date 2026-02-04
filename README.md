@@ -1,8 +1,8 @@
-📌 Job Tracker – MERN Stack Application
+# 📌 Job Tracker – MERN Stack Application
 
 A full-stack Job Application Tracker built using the MERN stack that helps users manage job applications, track interview progress, analyze job trends, and stay organized throughout the job-hunting process.
 
-🚀 Features
+# 🚀 Features
 🔐 Authentication
 
 1.User registration & login
@@ -59,8 +59,8 @@ A full-stack Job Application Tracker built using the MERN stack that helps users
 
 2.Clean pastel-themed interface
 
-🛠️ Tech Stack
-# 1.Frontend
+# 🛠️ Tech Stack
+ 1.Frontend
 
  a.React.js
 
@@ -70,7 +70,7 @@ A full-stack Job Application Tracker built using the MERN stack that helps users
 
  d.Vite
 
-# 2.Backend
+ 2.Backend
 
  a.Node.js
 
