@@ -5,91 +5,91 @@ A full-stack Job Application Tracker built using the MERN stack that helps users
 🚀 Features
 🔐 Authentication
 
-User registration & login
+1.User registration & login
 
-Secure JWT-based authentication
+2.Secure JWT-based authentication
 
 📋 Job Management
 
-Add, edit, delete job applications
+1.Add, edit, delete job applications
 
-Track job status: Applied, Interview, Offer, Rejected
+2.Track job status: Applied, Interview, Offer, Rejected
 
-Archive & restore jobs
+3.Archive & restore jobs
 
-Date tracking for each stage
+4.Date tracking for each stage
 
 📊 Analytics Dashboard
 
-Total applications count
+1.Total applications count
 
-Interview rate & offer rate
+2.Interview rate & offer rate
 
-Rejection tracking
+3.Rejection tracking
 
-Job urgency indicators (color-coded)
+4.Job urgency indicators (color-coded)
 
 ⏰ Smart Follow-Ups
 
-Automatic follow-up reminders
+1.Automatic follow-up reminders
 
-Daily agenda for interviews & pending actions
+2.Daily agenda for interviews & pending actions
 
 🧠 Resume ↔ Job Match Analyzer
 
-Upload resume (PDF)
+1.Upload resume (PDF)
 
-Paste job description
+2.Paste job description
 
-Skill matching & improvement suggestions
+3.Skill matching & improvement suggestions
 
 📝 Sticky Notes
 
-Save interview notes per job
+1Save interview notes per job
 
-Quick reminders & ideas
+2.Quick reminders & ideas
 
 📤 Export
 
-Export filtered jobs to CSV for offline analysis
+1.Export filtered jobs to CSV for offline analysis
 
 📱 Responsive UI
 
-Mobile-friendly design
+1.Mobile-friendly design
 
-Clean pastel-themed interface
+2.Clean pastel-themed interface
 
 🛠️ Tech Stack
-Frontend
+# 1.Frontend
 
-React.js
+ a.React.js
 
-React Router
+ b.React Router
 
-Inline CSS / Custom styling
+ c.Inline CSS / Custom styling
 
-Vite
+ d.Vite
 
-Backend
+# 2.Backend
 
-Node.js
+ a.Node.js
 
-Express.js
+ b.Express.js
 
-MongoDB
+ c.MongoDB
 
-Mongoose
+ d.Mongoose
 
-JWT Authentication
+ e.JWT Authentication
 
-Tools & Others
+# Tools & Others
 
-Axios
+ 1.Axios
 
-Git & GitHub
+ 2.Git & GitHub
 
-Postman
+ 3.Postman
 
-CSV Export
+ 4.CSV Export
 
-PDF handling
+ 5.PDF handling
