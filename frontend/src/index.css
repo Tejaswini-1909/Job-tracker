@@ -1,0 +1,26 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+/* ===== ROOT & BODY ===== */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%; /* 🔑 IMPORTANT */
+  font-family: Arial, Helvetica, sans-serif;
+
+  background: linear-gradient(135deg, #E3F2FD, #E3F2FD);
+}
+
+/* Allow scrolling */
+body {
+  overflow-y: auto;
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+  margin-bottom: 10px;
+}

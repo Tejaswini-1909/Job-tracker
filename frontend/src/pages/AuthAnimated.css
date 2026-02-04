@@ -1,0 +1,174 @@
+/* ========================= */
+/* BASE (DESKTOP) */
+/* ========================= */
+.auth-container {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg,  #E3F2FD,  #E3F2FD);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", sans-serif;
+  
+
+
+
+.auth-card {
+  width: 900px;
+  height: 480px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.auth-slider {
+  width: 200%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.auth-slider.login {
+  transform: translateX(0%);
+}
+
+.auth-slider.register {
+  transform: translateX(-50%);
+}
+
+.auth-panel {
+  width: 50%;
+  display: flex;
+  overflow: hidden;
+}
+
+.auth-left {
+  width: 50%;
+  background: linear-gradient(135deg, #0c5487 , #0c5487);
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-right {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-right h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0c5487;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #0c5487;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: #0c5487;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.auth-btn:hover {
+  background: #E3F2FD;
+}
+
+.switch-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.switch-text span {
+  color: #0c5487;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* 📱 MOBILE (VERTICAL SLIDE) */
+/* ========================= */
+@media (max-width: 768px) {
+  .auth-card {
+    width: 94%;
+    height: 92vh;
+  }
+
+  .auth-slider {
+    width: 100%;
+    height: 200%;
+    flex-direction: column;
+    transition: transform 0.7s ease-in-out;
+  }
+
+  .auth-slider.login {
+    transform: translateY(0%);
+  }
+
+  .auth-slider.register {
+    transform: translateY(-50%);
+  }
+
+  .auth-panel {
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+  }
+
+  .auth-left {
+    width: 100%;
+    min-height: 32%;
+    padding: 26px 22px;
+    text-align: center;
+  }
+
+  .auth-right {
+    width: 100%;
+    min-height: 68%;
+    padding: 26px 22px;
+    overflow-y: auto;          /* ✅ allows scrolling */
+  }
+
+  .switch-text {
+    margin-top: 18px;
+    padding-bottom: 20px;      /* ✅ ensures Login option visible */
+  }
+}
+
+/* ========================= */
+/* 💻 TABLET */
+/* ========================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .auth-card {
+    width: 90%;
+    height: 480px;
+  }
+
+  .auth-left,
+  .auth-right {
+    padding: 40px;
+  }
+}
+}
