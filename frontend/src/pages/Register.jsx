@@ -18,7 +18,7 @@ function Register({ switchMode }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await API.post("/auth/register", form);
+      await API.post("/api/auth/register", form);
       alert("Registered successfully");
       navigate("/");
     } catch (err) {
