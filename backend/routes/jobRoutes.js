@@ -91,34 +91,6 @@ router.put("/:id", auth, async (req, res) => {
   }
 });
 
-   // ARCHIVE / UNARCHIVE JOB
-
-// ARCHIVE / UNARCHIVE JOB
-router.patch("/:id/archive", auth, async (req, res) => {
-  try {
-    const job = await Job.findOne({
-      _id: req.params.id,
-      user: req.user.id   // 🔐 ensure ownership
-    });
-
-    if (!job) {
-      return res.status(404).json({ message: "Job not found" });
-    }
-
-    job.isArchived = !job.isArchived;
-    await job.save();
-
-    res.json(job); // ✅ return updated job
-  } catch (err) {
-    console.error("ARCHIVE ERROR:", err);
-    res.status(500).json({ message: "Archive failed" });
-  }
-});
-
-
-
-
-
 
 module.exports = router;
 

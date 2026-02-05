@@ -29,10 +29,7 @@ const JobSchema = new mongoose.Schema(
     rejectedDate: {
       type: Date
     },
- isArchived: {
-      type: Boolean,
-      default: false   // ✅ THIS FIXES EVERYTHING
-    },
+
 followUpDone: {
   type: Boolean,
   default: false

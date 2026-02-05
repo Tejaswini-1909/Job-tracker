@@ -27,7 +27,7 @@ function Dashboard() {
     if (localStorage.getItem("followupReminder") === todayKey) return;
 
     jobs.forEach((job) => {
-      if (job.isArchived) return;
+      
 
       if (job.status === "Applied" && job.appliedDate) {
         if (daysPassed(job.appliedDate) >= 7) {
@@ -122,19 +122,7 @@ function Dashboard() {
     setEditingJob(null);
   };
 
-  const toggleArchive = async (job) => {
-  try {
-    const res = await API.patch(`/jobs/${job._id}/archive`);
 
-    setJobs(
-      jobs.map((j) =>
-        j._id === job._id ? res.data : j
-      )
-    );
-  } catch (err) {
-    alert("Archive failed");
-  }
-};
 
 
   /* ================= DAILY AGENDA ================= */
@@ -149,7 +137,7 @@ function Dashboard() {
   };
 
   jobs.forEach((job) => {
-    if (job.isArchived) return;
+
 
     if (job.status === "Interview" && job.interviewDate) {
       const d = new Date(job.interviewDate);
@@ -205,11 +193,9 @@ function Dashboard() {
   const exportFilteredJobs = () => {
     // same filter logic as UI
     const filteredJobs = jobs.filter((job) =>
-      filter === "Archived"
-        ? job.isArchived
-        : !job.isArchived &&
-        (filter === "All" || job.status === filter)
-    );
+  filter === "All" || job.status === filter
+);
+
 
     if (filteredJobs.length === 0) {
       alert("No jobs to export");
@@ -302,7 +288,7 @@ function Dashboard() {
           <option>Interview</option>
           <option>Rejected</option>
           <option>Offer</option>
-          <option>Archived</option>
+         
         </select>
 
         <button
@@ -455,10 +441,8 @@ function Dashboard() {
       <div style={styles.grid}>
         {jobs
           .filter(job =>
-            filter === "Archived"
-              ? job.isArchived
-              : !job.isArchived &&
-              (filter === "All" || job.status === filter)
+
+              filter === "All" || job.status === filter
           )
           .sort((a, b) => getUrgencyScore(a) - getUrgencyScore(b))
           .map((job) => (
@@ -477,7 +461,7 @@ function Dashboard() {
 
               <p>Interview: {formatDate(job.interviewDate)}</p>
 
-              {!job.isArchived && (
+              
                 <>
                   <button onClick={() => setEditingJob(job)} style={{
                     background: "#E3F2FD",
@@ -502,20 +486,9 @@ function Dashboard() {
 
                   }}>🗑️Delete</button>
                 </>
-              )}
+              
 
-              <button onClick={() => toggleArchive(job)} style={{
-                background: "#E3F2FD",
-                color: " #0c5487",
-                border: "none",
-                padding: "6px 14px",
-                borderRadius: 8,
-                cursor: "pointer",
-                fontWeight: 600
 
-              }}>
-                {job.isArchived ? "♻️ Restore" : "🗄️ Archive"}
-              </button>
             </div>
           ))}
       </div>
