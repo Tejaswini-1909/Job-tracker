@@ -12,5 +12,6 @@ API.interceptors.request.use((req) => {
   }
   return req;
 });
+console.log("API BASE URL:", import.meta.env.VITE_API_BASE_URL);
 
 export default API;
