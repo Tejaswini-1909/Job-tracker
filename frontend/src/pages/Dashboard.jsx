@@ -123,15 +123,19 @@ function Dashboard() {
   };
 
   const toggleArchive = async (job) => {
-    await API.patch(`/jobs/${job._id}/archive`);
+  try {
+    const res = await API.patch(`/jobs/${job._id}/archive`);
+
     setJobs(
       jobs.map((j) =>
-        j._id === job._id
-          ? { ...j, isArchived: !j.isArchived }
-          : j
+        j._id === job._id ? res.data : j
       )
     );
-  };
+  } catch (err) {
+    alert("Archive failed");
+  }
+};
+
 
   /* ================= DAILY AGENDA ================= */
   const today = new Date();
