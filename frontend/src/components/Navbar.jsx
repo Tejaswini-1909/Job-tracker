@@ -46,7 +46,7 @@ function Navbar({ token, setToken }) {
     navigate("/");
   };
 
-  if (!token) return null;
+  if (!token || isAuthPage) return null;
 
   const initials =
     user?.name
